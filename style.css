@@ -1,0 +1,23 @@
+
+#myButton {
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #myButton:hover .popup {
+    display: block;
+  }
+  
+  .popup {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  

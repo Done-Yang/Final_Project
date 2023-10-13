@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Leaflet Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-dw5nOJ8rDz2jW4/8hj5pnp1YiE1Sv4QGZ3Hjwv6r6qLcF6BpEgjV+Rw2KQkLbEjvI+8Q5Xco5Gc7f8ThXzfKcA==" crossorigin=""/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-jZrzC0O1hL7gj0UZc4X0VlA9f1I4v9P7N6N+7M5Q1yPNEQ5xM5E1hNpV4F5hYbNIXJW8MgQ7wY4yEepB9QJvwg==" crossorigin=""></script>
+    <style>
+      #mapid { height: 500px; }
+    </style>
+  </head>
+  <body>
+    <div id="mapid"></div>
+
+  <script>
+    
+        // create a map object
+        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+        // add a tile layer 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy <a href="httpswww.openstreetmap.org/">OpenStreetMap</a> contributors',
+        maxZoom: 18
+        }).addTo(mymap);
+
+        // add a marker
+        var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
+        // add a popup to the marker
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+  </script>
+  </body>
+</html>

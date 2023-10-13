@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page-wrapper %}
+    <div class="page-wrapper">
+        <div class="hero">
+            <form method="GET" action="{% url 'search' %}">
+                <h1>Search IP Adress and Host Name Details</h1>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div  class="d-flex group-form col-7">
+                        {% if search_detial != '' %}
+                            <input type="text" class="form-control" placeholder="IP Adress/Host Name" name="search" value="{{search_detial}}">
+                        {% else %}
+                            <input type="text" class="form-control" placeholder="IP Adress/Host Name" name="search">
+                        {% endif %}
+                        <button type="submit" class="">Search</button>
+                    </div>
+                </div>
+            </form>
+            <!-- {% if messages %}
+                {% for message in messages %}
+                    <div class="m-auto p-auto col-10 alert alert-danger" role="alert">{{ message }}</div>
+                {% endfor %}
+            {% endif %} -->
+            {% block search_result %}
+                               
+            {% endblock %}
+        </div>
+        <div class="container">
+            <div class="row">
+                <main class="col-8">
+                    <article>
+                        <h1>My First Blog Post</h1>
+                        <p>Posted on January 1, 2022 by John Doe</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum luctus justo, a
+                            fermentum elit scelerisque id. Nunc at ante in velit pellentesque bibendum. Nam aliquam urna
+                            vel velit tempus, sit amet pulvinar magna dictum. Vestibulum dictum, quam sed vestibulum
+                            aliquet, metus eros bibendum sem, et congue nulla eros vel neque. Nulla facilisi. Sed quam
+                            lectus, varius eget ex a, tincidunt congue enim. </p>
+                        <p>Suspendisse potenti. Sed id luctus enim. Sed in metus eget ex tincidunt bibendum. Proin
+                            pellentesque, orci eu vulputate bibendum, risus augue vehicula sapien, a placerat sapien
+                            orci vel velit. Sed ut eros ac neque bibendum ultrices. Aenean varius purus sit amet lacus
+                            luctus, eu iaculis nunc tincidunt. </p>
+                    </article>
+                    <article>
+                        <h1>My Second Blog Post</h1>
+                        <p>Posted on January 5, 2022 by Jane Smith</p>
+                        <p>Vivamus fermentum tortor at odio egestas, quis varius lorem feugiat. Donec ait erat, at
+                            feugiat ante. Phasellus id enim id mauris bibendum suscipit. Nam ac ex vestibulum, eleifend
+                            mauris vel, pharetra velit. Maecenas auctor non enim ut pharetra. Praesent id molestie nibh,
+                            nec ultrices leo. </p>
+                        <p>Proin pellentesque, orci eu vulputate bibendum, risus augue vehicula sapien, a placerat
+                            sapien orci vel velit. Sed ut eros ac neque bibendum ultrices. Aenean varius purus sit amet
+                            lacus luctus, eu iaculis nunc tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Nulla elementum luctus justo, a fermentum elit scelerisque id. Nunc at ante in velit
+                            pellentesque bibendum. Nam aliquam urna vel velit tempus, sit amet pulvinar magna dictum.
+                        </p>
+                    </article>
+                </main>
+                <aside class="col-4 text-end">
+                    <h2>Categories</h2>
+                    <ul>
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 2</a></li>
+                        <li><a href="#">Category 3</a></li>
+                        <li><a href="#">Category 4</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+{% endblock %}
