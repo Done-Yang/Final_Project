@@ -29,13 +29,23 @@
                     </div>
                     <ul class="nav-links col-7 d-flex">
                         <li><a href="{% url 'home' %}">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                Blogs
+                            </a>
+                            <ul class="dropdown-menu blog-nav">
+                                <li><a class="dropdown-item" href="{% url 'home' %}#why_tis_website">Why this website</a></li>
+                                <li><a class="dropdown-item" href="{% url 'home' %}#search_dt">Search detials</a></li>
+                                <li><a class="dropdown-item" href="{% url 'home' %}#ip_lookup">What is an IP-Lookup</a></li>
+                            </ul>
+                        </li>
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li>
                             <div class="dropdown" data-bs-theme="light">
                                 <img src="../static/img/english-flag.png" alt="" class="dropdown-toggle" data-bs-toggle="dropdown">
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" ><img src="../static/img/english-flag.png" alt=""></a></li>
-                                    <li><a class="dropdown-item" href="#" ><img src="../static/img/laos-flag.png" alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#" ><img src="../static/img/english-flag.png" alt="">  English</a></li>
+                                    <li><a class="dropdown-item" href="#" ><img src="../static/img/laos-flag.png" alt="">  Laos</a></li>
                                 </ul>
                             </div>
                         </li>

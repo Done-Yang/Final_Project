@@ -169,4 +169,10 @@ body {
     margin: 0;
   }
   
+  .mian-contents article ul li{
+    list-style: circle;
+  }
+  .dropdown ul li a {
+    color: #333;
+  }
   
