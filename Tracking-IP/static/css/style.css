@@ -176,3 +176,22 @@ body {
     color: #333;
   }
   
+  .pro-card .img {
+    margin: auto;
+    height: 10em;
+    width: 10em;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .pro-card .icon i{
+    font-size: 30px;
+  }
+  .pro-card .bi-facebook {
+    color: #0074D9;
+  }
+  .pro-card .bi-instagram {
+    color: #ff9720;
+  }
+  .pro-card .bi-tiktok {
+    color: #000000;
+  }
